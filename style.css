@@ -1,0 +1,19 @@
+.box:hover{
+    box-shadow:0.5px 0.5px 30px black;
+    transform: translateY(10px);
+}
+.box{
+    height: 25s0px;
+    width: 450px;
+    padding: 2rem;
+    margin: 10px;
+    background-color:white ;
+    border-radius: 15px;
+    transition: all 1s;
+    border: 2px solid red;
+    
+}
+  
+#box_2{
+    width: 600px;
+}

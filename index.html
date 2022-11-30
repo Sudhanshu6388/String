@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body{
+            border: 5px solid black;
+            border-radius: 10px;
+            background-color: lightseagreen;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 style="color: darkblue;  text-decoration: underline; font-size: 40px; ">String</h1>
+    </center>
+    <center>
+        <div class="box"  id="box_1">
+            <h2>1. Count Characters</h2>
+        <pre style="font-size: 15px; ">
+          c
+          const countCharacters = (S) => 
+          { let B=[];
+          let count1=0, count2=0;
+          for(let i=0;i< S. length;i++){
+            if(S[i] === "A"){
+               count1++;
+            }
+            else if(S[i]=== "D"){
+              count2++;
+            }
+              
+            }
+            B.push(count1);
+            B.push(count2);
+           return B;
+          
+          };
+           
+          
+       </pre >
+       
+       </div>
+       <hr>
+       <div class="box" id="box_2">
+        <h2>2.Count the Heads</h2>
+        <pre style="font-size: 15px ;" >
+          
+var Count_Occ = (s) => 
+{ const alphabets = []
+         for(let i=0; i< s.length; i++){
+           alphabets.push(s.charAt(i))
+         }
+         const repitive_value = alphabets.filter((alphabet, index) 
+         => alphabets.indexOf(alphabet) !== alphabets.lastIndexOf(alphabet))
+          repitive_value.sort(repitive_value)
+          let newStr = ""
+          counter = 1
+          for(let i=0; i< repitive_value.length; i++){
+            if(repitive_value[i] === repitive_value[i+1]){
+              counter++
+            }
+            else{
+              newStr = newStr + repitive_value[i] + counter
+              counter = 1
+            }
+          }
+          return newStr
+    
+};
+ 
+
+    </pre>
+       </div>
+    <hr>
+    <div class="box" id="box_3">
+        <h2>3. Count the Vowels</h2>
+    <pre style="font-size: 15px;">
+      
+var Count_Vowels= (S) => 
+{
+   Count_V=0
+          let Vowels= 'aeiou'
+          for(let i=0; i< S.length; i++){
+            for(let j=0; j< Vowels.length; j++){
+            if(S[i]===Vowels[j]){
+              Count_V++
+            }
+            }
+          }
+          return Count_V    
+};
+ 
+
+    </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_4">
+        <h2>4.Concatenate the Strings</h2>
+    <pre style="font-size: 15px;">
+ 
+var Concatenate_Strings = (S1, S2) => 
+{
+      let S3=''
+           S3 = S1 + S2
+           return S3
+};
+ 
+
+  </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_5">
+        <h2>5. Find Length</h2>
+    <pre style="font-size: 15px;">
+    
+const findLength = (S) => 
+{
+   return S.length 
+};
+ 
+
+  </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_6">
+        <h2>6. Find Winner.</h2>
+    <pre style="font-size: 15px;">
+    
+var Game_Winner = (S) => 
+{let countA = 0;
+        let countD = 0;
+        for(let i = 0; i < S.length; i++){
+          if(S[i] ==="A"){
+            countA++
+          }
+          else countD++
+        }
+        if(countA > countD){
+          return "Aditya"
+        }
+        else if(countD > countA){
+          return "Danish"
+        }
+        else return "Draw"
+  
+}
+ 
+
+  </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_7">
+        <h2>7. Join Strings .</h2>
+    <pre style="font-size: 15px;">
+        const joinStrings = (S, P) => 
+        {let joinStr = ''
+                  joinStr = S+P
+                  return joinStr
+            
+        };
+  </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_8">
+        <h2>8. Palindrome Check </h2>
+    <pre style="font-size: 15px;">
+      
+var Palin_Check = (str) =>
+{
+	let i=0
+         let j= str.length-1
+         let count=0
+         
+         while(i< j){
+           if(str[i] !== str[j]){
+             count = 1;
+             break;
+           }
+           i++
+           j--
+         }
+         
+         if(count ===1){
+           return "False"
+         }else{
+           return "True"
+         }
+}
+
+
+   
+  </pre>
+    </div>
+    
+    <hr>
+    <div class="box" id="box_9">
+        <h2>9. Reverse the Strings</h2>
+    <pre style="font-size: 15px;">
+  
+var Reverse_String = (str) => 
+{
+    const tempArr = []
+        let reverseStr = ''
+        for(let i= str.length-1; i>=0; i--){
+          tempArr.push(str.charAt(i))
+        }
+        
+        for(let i=0; i< tempArr.length; i++){
+          reverseStr += tempArr[i]
+        }
+        return reverseStr 
+};
+ 
+
+       </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_10">
+        <h2>10.Match the String</h2>
+        <pre style="font-size: 15px;">
+        
+       var String_Match = (S1,S2) => 
+      {
+    if(S1===S2){
+              return "YES"
+            } else{
+              return "NO"
+            }  
+};
+ 
+
+        </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_11">
+        <h2>11. String Replace</h2>
+        <pre style="font-size: 15px;">
+        
+var Replace = (S, pattern , text) => 
+{
+      return S.replace(pattern , text)
+};
+ 
+
+        </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_12">
+        <h2>12.Split the Strings</h2>
+        <pre style="font-size: 15px;">
+         
+var Split_the_string = (S) => 
+{
+  let spl = S.split(" ") 
+          return spl
+        
+};
+ 
+
+        </pre>
+    </div>
+    <hr>
+    <div class="box" id="box_13" >
+        <h2>13. Count the Vowels and Consonants</h2>
+        <pre style="font-size: 15px;">
+        
+var Count_Vowels= (S) => 
+{
+  Count_V=0
+              let Vowels= 'aeiou'
+              for(let i=0; i< S.length; i++){
+                for(let j=0; j< Vowels.length; j++){
+                if(S[i]===Vowels[j]){
+                  Count_V++
+                }
+                }
+              }
+              return Count_V    
+};
+var Count_Consonants= (S) => 
+{
+   Count_C=0
+              let Consonants= 'bcdfghjklmnpqrstvwxyz'
+              // console.log(Consonants.length)
+              for(let i=0; i< S.length; i++){
+                for(let j=0; j< Consonants.length; j++){
+                if(S[i].toLowerCase()===Consonants[j]){
+                  Count_C++
+                }
+                }
+              }
+              return Count_C    
+};
+ 
+
+        </pre>
+
+    </div>
+    </center>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
